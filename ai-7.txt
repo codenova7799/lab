@@ -1,0 +1,27 @@
+import re
+
+print("Chatbot: Hello! I am a Rule-Based Chatbot.")
+print("Chatbot: Type 'bye' to exit.")
+
+while True:
+    user = input("You: ").lower()
+
+    if re.search(r"\b(hi|hello|hey)\b", user):
+        print("Chatbot: Hello! How can I help you?")
+
+    elif re.search(r"\b(name)\b", user):
+        print("Chatbot: I am an AI Rule-Based Chatbot.")
+
+    elif re.search(r"\b(how are you)\b", user):
+        print("Chatbot: I am fine. Thank you!")
+
+    elif re.search(r"\b(help)\b", user):
+        print("Chatbot: Sure! How can I help you?")
+
+    elif re.search(r"\b(bye|goodbye)\b", user):
+        print("Chatbot: Goodbye!")
+        break
+
+    else:
+        print("Chatbot: Sorry, I don't understand.")
+
